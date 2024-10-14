@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import '~@angular/material/prebuilt-themes/indigo-pink.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+body {
+    margin: 0 auto;
+}
+
+app-login {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-image: url('../src/app/login/assets/fondoLogIn.jpg');
+    background-position: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;  
+}
+
+app-home {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-image: url('../src/app/home/assets/fondoHome.jpg');
+    background-position: center;
+    display: grid;
+    place-items: center;
+    height: 100vh;  
+}
+
+app-projects {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url('../src/app/projects/assets/fondoProyect.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+}
+
+app-tasks {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url('../src/app/tasks/assets/fondoTasks.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

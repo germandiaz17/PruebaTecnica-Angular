@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+//app creada por German Diaz
 @Component({
   selector: 'app-root',
   standalone: true,

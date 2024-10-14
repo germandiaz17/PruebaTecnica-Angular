@@ -1,0 +1,15 @@
+<div class="login_container">
+    <h2>Inicio de Sesion</h2>
+    <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required #usernameInput="ngModel">
+        <div *ngIf="usernameInput.invalid && (usernameInput.touched || loginForm.submitted)" class="error">El campo de usuario es obligatorio</div>
+
+        <label for="password">contraseña:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" #passwordInput="ngModel" required>
+        <div *ngIf="passwordInput.invalid && (passwordInput.touched || loginForm.submitted)" class="error">El campo de password es obligatorio</div>
+        <br>
+        <br>
+        <button type="submit">Iniciar sesion</button>
+    </form>
+</div>

@@ -1,0 +1,79 @@
+.projects-container {
+    padding: 20px;
+    color: white;
+}
+form{
+    background-color: rgba(121, 99, 248, 0.5);
+    padding: 10px 10px 10px;
+}
+
+h2{
+    font-size: 2.7rem;
+}
+input{
+    height: 30px;
+    background-color: rgba(8, 8, 8, 0.1);
+    border: 0px;
+    border-bottom: 1px solid white;
+    color: aliceblue;
+    outline: none;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1.3rem;
+    width: 50%;
+}
+
+.btn-crud{
+    margin-left: 20px;
+}
+
+label{
+    display: block;
+}
+
+.msg-err{
+    color: rgb(214, 6, 6);
+}
+button{
+    background-color: rgba(8, 8, 8, 0.1);
+    border: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+button:hover{
+    background-color: rgb(59, 99, 209);
+    cursor: pointer;
+}
+
+.card {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(121, 99, 248, 0.5);
+    }
+
+.card-content h3 {
+    margin: 0 0 10px;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+
+table, th, td {
+    border: 1px solid #ddd;
+    }
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    }
+
+th {
+    background-color: #f2f2f2;
+    }

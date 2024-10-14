@@ -1,0 +1,117 @@
+.tasks-container {
+    padding: 20px;
+    color: white;
+}
+
+form {
+background-color: rgba(121, 99, 248, 0.5);
+padding: 10px 10px 10px;
+}
+
+h2{
+    font-size: 2.7rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(121, 99, 248, 0.5);
+}
+
+table, th, td {
+    border: 1px solid rgba(169, 156, 243, 0.5);
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.completed {
+    font-weight: bold;
+}
+
+.not-completed {
+    font-weight: bold;
+}
+
+.inp-title{
+    height: 30px;
+    width: 70%;
+    background-color: rgba(8, 8, 8, 0.1);
+    border: 0px;
+    border-bottom: 1px solid white;
+    color: aliceblue;
+    outline: none;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+
+button{
+    background-color: rgba(8, 8, 8, 0.1);
+    border: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+button:hover{
+    background-color: rgb(59, 99, 209);
+    cursor: pointer;
+}
+
+.check-lbl{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    font-family: 'Arial', sans-serif;
+}
+
+.check-lbl input[type="checkbox"] {
+    display: none;
+}
+
+.check-lbl .check-span {
+    margin-left: 10px;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.check-lbl input:checked + .check-span {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.check-lbl .check-span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.check-lbl input:checked + .check-span:after {
+    display: block;
+}
+
+.check-lbl:hover .check-span {
+    border-color: #777;
+}

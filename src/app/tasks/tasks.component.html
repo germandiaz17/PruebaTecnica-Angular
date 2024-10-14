@@ -1,0 +1,58 @@
+<div class="tasks-container">
+
+    <hr>
+    <h3>{{ editingTasksId ? 'Editar esta tarea' : '¿Deseas crear una nueva tarea?' }}</h3>
+    <form [formGroup]="tasksForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="title">Titulo:</label>
+            <input class="inp-title" id="title" formControlName="title" required>
+            <div *ngIf="tasksForm.get('title')?.invalid && tasksForm.get('title')?.touched">
+                title es obligatorio
+            </div>
+        </div>
+        <br>
+        <div>
+            <label class="check-lbl" for="completed">
+                ¿La tarea esta completada?
+                <input id="completed" type="checkbox" formControlName="completed">
+                <span class="check-span"></span>
+            </label>
+        </div>
+        <br>
+        <button type="submit">{{ editingTasksId ? 'Actualizar Proyecto' : 'Crear Proyecto' }}</button>
+    </form>
+    <br>
+    <h2>Lista de Tareas</h2>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Completada</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let task of tasks">
+            <td>{{ task.id }}</td>
+            <td>{{ task.title }}</td>
+
+            <td>
+            <span *ngIf="task.completed; else notCompleted" class="completed">✔️ Completada</span>
+            <ng-template #notCompleted>
+                <span class="not-completed">❌ No completada</span>
+            </ng-template>
+            </td>
+            <td>
+                <button (click)="editasks(task)">Editar</button>
+            </td>
+            <td>
+                <button (click)="confirmDeleteTasks(task.id)" >Eliminar</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>

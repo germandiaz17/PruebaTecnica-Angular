@@ -1,0 +1,51 @@
+<div class="projects-container">
+    <hr>
+    <h3>{{ editingProjectId ? 'Actualiza el proyecto' : '¿Deseas crear una nueva tarea?' }}</h3>
+    <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Nombre:</label>
+            <input id="name" formControlName="name" required>
+            <div class="msg-err" *ngIf="projectForm.get('name')?.invalid && projectForm.get('name')?.touched">
+                Nombre es obligatorio
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" required>
+            <div class="msg-err" *ngIf="projectForm.get('email')?.invalid && projectForm.get('email')?.touched">
+                Email es obligatorio.
+            </div>
+        </div>
+        <br>
+        <div formGroupName="company">
+            <label for="companyName">Compañía:</label>
+            <input id="companyName" formControlName="name" required>
+            <div class="msg-err" *ngIf="projectForm.get('company.name')?.invalid && projectForm.get('company.name')?.touched">
+                El nombre de la compañía es obligatorio
+            </div>
+        </div>
+        <br>
+        <button type="submit">{{ editingProjectId ? 'Actualizar Proyecto' : 'Crear Proyecto' }}</button>
+    </form>
+
+    <h2>Lista de Proyectos</h2>
+    <hr>
+
+    <div class="card" *ngFor="let project of projects">
+        <div class="card-content">
+            <h3>{{ project.name }}</h3>
+            <p><strong>Id:</strong> {{ project.id }}</p>
+            <p><strong>Nombre:</strong> {{ project.name }}</p>
+            <p><strong>Email:</strong> {{ project.email }}</p>
+            <p><strong>Compañía:</strong> {{ project.company.name }}</p>
+            <button (click)="editProject(project)">Editar</button>
+            <button pButton class="btn-crud" (click)="confirmDeleteProject(project.id)" icon="pi pi-times">Eliminar</button>
+            <button class="btn-crud" (click)="redirectionTasks(project.id)">Seleccionar</button>
+        </div>
+    </div>
+
+    <div *ngIf="projects.length === 0">
+        <p>No hay proyectos disponibles</p>
+    </div>
+</div>
