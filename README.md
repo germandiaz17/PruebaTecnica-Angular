@@ -10,7 +10,7 @@ INICIO DE SESION: Username: admin, Password: root.
 
 2) En la creacion de proyectos/tareas cada nuevo registro que se cree va a generarse con el mismo id, esto debido a que la api publica que se usa tiene restricciones.
 
-3) Lo mismo pasa al momento de editar un registro que se cree nuevo, no se va a poder editar debido a que la api tiene persistencia de informacion.
+3) Lo mismo pasa al momento de editar un registro que se cree nuevo, no se va a poder editar debido a que la api no tiene configurada persistencia de informacion ya que es una api publica.
 
 4) Se tuvo en cuenta todos los requisitos tecnicos solicitados (Lazy loading, Formularios Reactivos, Manejo de servicios, Modularidad e Interfaz de usuario clara y sencilla de usar)
 
