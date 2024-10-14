@@ -1,3 +1,10 @@
+
+
+## PUNTOS A TENER EN CUENTA
+INICIO DE SESION: username: admin, password: root
+En la creacion de proyectis/tareas cada nuevo registro que se cree va a generarse con el mismo id, esto debido a que la api publica que se usa tiene restricciones.
+Lo mismo pasa al momento de editar un registro que se cree nuevo, no se va a poder editar debido a que la api tiene persistencia de informacion
+
 # PruebaTecnica
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
